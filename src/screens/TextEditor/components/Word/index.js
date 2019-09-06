@@ -27,10 +27,10 @@ function Word({ word, index, selected, onWordPress, wordProperties }) {
 }
 
 Word.propTypes = {
-  index: number,
-  word: string,
+  index: number.isRequired,
+  word: string.isRequired,
   selected: bool,
-  onWordPress: func,
+  onWordPress: func.isRequired,
   wordProperties: shape({
     bold: bool,
     italic: bool,
