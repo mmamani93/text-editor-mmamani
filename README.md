@@ -2,6 +2,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 This text editor was developed by Mauro Mamani
 
+## Run this project
+If you want to run this App and test it, you will have to run `git checkout text-editor`. Functionality is implemented in that branch.
+
 ## Initial setup
 Open your Terminal/Console and run `npm install` in order to setup application, this will install the needed dependencies (You must have previously installed npm).
 Visit https://www.npmjs.com/get-npm if don't have npm installed.
