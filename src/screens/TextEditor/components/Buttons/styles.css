@@ -1,0 +1,30 @@
+.button-row {
+  background-color: #DDD;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+}
+
+.button {
+  border-right: 1px solid #555;
+  height: 25px;
+  padding: 5px;
+  width: 30px;
+}
+
+.last-button {
+  border: none;
+}
+
+.synonyms-list {
+  background-color: #CCC;
+  padding: 5px 10px;
+  width: 100px;
+}
+
+.selected-prop {
+  background-color: #BBB;
+}

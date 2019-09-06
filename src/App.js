@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
+import TextEditor from './screens/TextEditor';
 import './App.css';
-import ControlPanel from "./control-panel/ControlPanel";
-import FileZone from "./file-zone/FileZone";
 import getMockText from './text.service';
 
 class App extends Component {
@@ -17,8 +16,7 @@ class App extends Component {
                     <span>Simple Text Editor</span>
                 </header>
                 <main>
-                    <ControlPanel/>
-                    <FileZone/>
+                    <TextEditor />
                 </main>
             </div>
         );

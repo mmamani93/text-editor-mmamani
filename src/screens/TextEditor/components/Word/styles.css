@@ -1,0 +1,23 @@
+.generic-word {
+  color: #717171;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 5px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.pressed {
+  background-color: rgba(174, 194, 229, 0.5);
+}
