@@ -1,6 +1,7 @@
 import React from 'react';
 import { func, arrayOf, shape, bool, string, number } from 'prop-types';
 
+import { UNSELECTED_WORD } from './constants';
 import Word from './components/Word';
 import Buttons from './components/Buttons';
 import './styles.css';
@@ -20,7 +21,7 @@ function TextArea({
 }) {
   return (
     <div className="editor-container">
-      {selectedWord !== -1 && (
+      {selectedWord !== UNSELECTED_WORD && (
         <Buttons
           buttonsPosition={buttonsPosition}
           changeWord={handleChangeWord}
@@ -31,7 +32,7 @@ function TextArea({
           wordProperties={wordProperties[selectedWord] || {}}
         />
       )}
-      <div className="text-area" onClick={() => setSelectedWord(-1)}>
+      <div className="text-area" onClick={() => setSelectedWord(UNSELECTED_WORD)}>
         {textArray.map((w, index) => (
           <Word
             index={index}

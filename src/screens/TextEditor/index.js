@@ -3,17 +3,15 @@ import React, { useState, useCallback } from 'react';
 import { getSynonyms } from '../../services/datamuseService';
 
 import { defineWordsProperties, calculateCoordinates } from './utils';
-import { TEXT, TYPES } from './constants';
+import { TEXT, TYPES, UNSELECTED_WORD } from './constants';
 import TextArea from './layout';
-
 
 function TextAreaContainer() {
   const [textArray, setTextArray] = useState(TEXT.split(' '));
   const [wordProperties, setWordProperties] = useState({});
-  const [selectedWord, setSelectedWord] = useState(-1);
+  const [selectedWord, setSelectedWord] = useState(UNSELECTED_WORD);
   const [synonyms, setSynonyms] = useState([]);
-  const [buttonsPosition, setButtonsPosition] = useState({})
-
+  const [buttonsPosition, setButtonsPosition] = useState({});
 
   const handleChangeWord = ({ target }) => {
     const newTextArray = [...textArray];
@@ -23,7 +21,7 @@ function TextAreaContainer() {
 
   const handleWordPress = async ({ index, word, coordinates }) => {
     setButtonsPosition(calculateCoordinates(coordinates.clientX, coordinates.clientY));
-    if (index === selectedWord) setSelectedWord(-1);
+    if (index === selectedWord) setSelectedWord(UNSELECTED_WORD);
     else {
       const syn = await getSynonyms(word);
       setSynonyms(syn.data);
