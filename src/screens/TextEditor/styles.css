@@ -1,0 +1,15 @@
+.editor-container {
+  background-color: #E2D2AC;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 70px 350px;
+}
+
+.text-area {
+  background-color: #FFF;
+  border: 2px solid #FFA500;
+  border-radius: 20px;
+  min-height: 500px;
+  padding: 20px;
+}
